@@ -1,6 +1,6 @@
 {
   "name": "gatsby-plugin-source-algolia",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "dependencies": {
     "algoliasearch": "^4.14.2",
     "fs-extra": "^10.1.0"
