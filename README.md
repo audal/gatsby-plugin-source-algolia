@@ -26,6 +26,9 @@ Used in production on many projects at <a href="https://healthmarkets.com">Healt
 #### Can I use multiple instances of this plugin for different indexes?
 Yes!
 
+#### How fast is it really?
+Very! When used on Gatsby Cloud on a site with >100K pages, build times decreased ~5x without caching, compared to sourcing data in createPages. Install it and see for yourself. By running most of the data fetching inside resolvers, Gatsby can parallel our data fetching across multiple worker processes, without the choking Algolia usually experiences when returning massive pages of data.
+
 #### Getting started
 After installing, add the plugin to your `gatsby-config.js` file. You will need to add config options to setup the plugin.
 
