@@ -1,0 +1,29 @@
+{
+  "name": "gatsby-plugin-source-algolia",
+  "version": "0.0.2",
+  "dependencies": {
+    "algoliasearch": "^4.14.2",
+    "fs-extra": "^10.1.0"
+  },
+  "peerDependencies": {
+    "gatsby": "^4.0.0 || ^5.0.0"
+  },
+  "description": "Gatsby Plugin to source Algolia Data in a scalable manner.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/audal/gatsby-plugin-source-algolia.git"
+  },
+  "keywords": [
+    "gatsby-plugin"
+  ],
+  "author": "Audal Labs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/audal/gatsby-plugin-source-algolia/issues"
+  },
+  "homepage": "https://github.com/audal/gatsby-plugin-source-algoliap#readme"
+}
