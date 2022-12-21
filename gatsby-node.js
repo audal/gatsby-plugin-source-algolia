@@ -90,7 +90,7 @@ exports.createResolvers = async ({ createResolvers }, { indexName, gatsbyTypeNam
 
 exports.pluginOptionsSchema = ({ Joi }) => Joi.object({
     applicationId: Joi.string().required().description('Algolia Application ID'),
-    browseObjectApiKey: Joi.string().required().description('Algolia Browse Objects (Full-Access) API Key'),
+    browseObjectsApiKey: Joi.string().required().description('Algolia Browse Objects (Full-Access) API Key'),
     indexName: Joi.string().required().description('Algolia Index Name'),
     gatsbyTypeName: Joi.string().required().description('Gatsby Type Name for sourced nodes'),
     dependencies: Joi.array().items(Joi.string()).min(1),
