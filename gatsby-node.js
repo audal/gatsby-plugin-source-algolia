@@ -44,7 +44,7 @@ exports.sourceNodes = async (
 
     if (Array.isArray(hits)) {
         hits?.forEach((hit) => {
-            const slug = getSlug(hit);
+            const slug = getSlug ? getSlug(hit) : hit.objectID;
 
             if (slug && !knownSlugs.has(slug)) {
                 knownSlugs.set(slug, true);
@@ -94,7 +94,7 @@ exports.pluginOptionsSchema = ({ Joi }) => Joi.object({
     indexName: Joi.string().required().description('Algolia Index Name'),
     gatsbyTypeName: Joi.string().required().description('Gatsby Type Name for sourced nodes'),
     dependencies: Joi.array().items(Joi.string()).min(1),
-    getSlug: Joi.function().arity(1).required().description('Function for getting the slug of the node from the dependencies array and objectID'),
+    getSlug: Joi.function().arity(1).description('Function for getting the slug of the node from the dependencies array and objectID'),
     limitItems: Joi.number().description('The max number of items to source'),
     cacheLifetime: Joi.number().description('The max amount of time to cache Algolia results for (in hours). Default is 72.'),
 });
